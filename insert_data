@@ -1,0 +1,595 @@
+--Insert dos ramos de atuação
+INSERT INTO T_JKC_RAMO_ATUACAO
+    VALUES (sq_ramo_atuacao.nextval, 'PAPEL E CELULOSE');
+INSERT INTO T_JKC_RAMO_ATUACAO
+    VALUES (sq_ramo_atuacao.nextval, 'ENERGIA E TRANSMISSÃO');
+INSERT INTO T_JKC_RAMO_ATUACAO
+    VALUES (sq_ramo_atuacao.nextval, 'USINAGEM');
+INSERT INTO T_JKC_RAMO_ATUACAO
+    VALUES (sq_ramo_atuacao.nextval, 'MINERAÇÃO');
+INSERT INTO T_JKC_RAMO_ATUACAO
+    VALUES (sq_ramo_atuacao.nextval, 'ALIMENTÍCIO');
+INSERT INTO T_JKC_RAMO_ATUACAO
+    VALUES (sq_ramo_atuacao.nextval, 'FABRICACAO DE ITENS DE CONSTRUÇÃO CIVIL');
+INSERT INTO T_JKC_RAMO_ATUACAO
+    VALUES (sq_ramo_atuacao.nextval, 'SIDERURGIA');
+
+--Insert das empresas, proprietários e entidade associativa
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 1, 43014521000100, 'SENGES PAPEL E CELULOSE LTDA', null, TO_DATE('29/07/1971','DD/MM/YYYY'), null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'mara@sengespapel.com.br', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Janey Rose Sguario', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('11/01/2005','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Lisiane Sguario Souza', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('11/01/2005','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Maria Cristina Sguario', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('11/01/2005','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Senges Participacoes Ltda', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('12/11/2018','DD/MM/YYYY'), null);
+
+
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 2, 28443452000167,  'NEOENERGIA VALE DO ITAJAI TRANSMISSAO DE ENERGIA S.A.', null, '17/08/2017', null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'william@wxcontabilidade.com', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Fabiano Uchoas Ribeiro', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('07/05/2021','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Luciana Maximino Maia', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('09/09/2022','DD/MM/YYYY'), null);
+
+
+INSERT INTO T_JKC_EMPRESA 
+    VALUES (sq_empresa.nextval, 6, 28050932000168, 'LORENZETTI SA INDUSTRIAS BRASILEIRAS ELETROMETALURGICAS', 'LORENZETTI', '21/01/2009', null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'fiscal@lorenzetti.com.br', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Adriano Lorenzetti Bassetto', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('07/07/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Alceu Duilio Calciolari', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('05/09/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Aldo Alberto Lorenzetti', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('30/12/2000','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Alexandre Jose Antonio Lorenzetti', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('30/12/2000','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Alexandre Luiz Tambasco', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('27/03/2018','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Antonella Bertolucci Locoselli', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('07/07/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Claudio Cavalcanti Lorenzetti', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('07/07/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Claudio Lourenco Lorenzetti', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('30/12/2000','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Eduardo Jose Coli', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('04/06/2007','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Eliane Lorenzetti Bez Chleba', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('07/07/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Rogerio Pacheco Bertolucci', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('07/07/2022','DD/MM/YYYY'), null);
+
+
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 4, 61327904000110, 'IMERYS DO BRASIL COMERCIO DE EXTRACAO DE MINERIOS LTDA', null, TO_DATE('22/07/1966','DD/MM/YYYY'), null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'efranco@imerys.com', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Imerys Rio Capim Caulim S.A.', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('02/06/2003','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Mircal S.A.', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('30/07/2003','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Para Pigmentos S.A.', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('31/12/2019','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Anderson Rocha Agostinho', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('15/08/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Eduardo Teixeira Cangussu', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('15/08/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Marcia Alves Cunha Martins', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('19/08/2014','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Wilson Alves da Silva Junior', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('15/07/2015','DD/MM/YYYY'), null);
+
+
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 5, 06042467000180, 'BAGLEY DO BRASIL ALIMENTOS LTDA', null, TO_DATE('14/11/2003','DD/MM/YYYY'), null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'rlolo@arcor.com', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Bagley Argentina Sociedade...', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('01/11/2007','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Bagley Latinoamerica Sa', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('18/02/2005','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Hugo Alberto Gustavo Reggiani', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('24/06/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Mario Enrique Pagani', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('10/05/2011','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Milad Mirkhan', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('02/02/2016','DD/MM/YYYY'), null);
+    
+    
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 1, 42463886000150, 'OS PAPEIS FABRICACAO DE ARTEFATOS DE PAPEL E PAPELAO LTDA', 'OS PAPEIS', TO_DATE('24/06/2021','DD/MM/YYYY'), null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'lidia.imai@imai.com.br', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Lidia Aiko Kuwamoto Imai', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('24/06/2021','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Osvaldo Yuzo Imai', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('24/06/2021','DD/MM/YYYY'), null);
+    
+    
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 6, 47191763000120, 'CABR CABOS FABRICACAO DE FIOS CABOS E CONDUTORES ELETRICOS LTDA', 'CABR CABOS', TO_DATE('18/07/2022','DD/MM/YYYY'), null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'portacabos@portacabos.com.br', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Daf California Holding Investimentos e...', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('18/07/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Flavio Nakamura', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('18/07/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Leopoldo Dantas do Amaral Filho', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('18/07/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Metha Holding Investimentos e...', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('18/07/2022','DD/MM/YYYY'), null);
+
+
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 5, 27708612000190, 'SUGAR PRIME FABRICACAO, IMPORTACAO E EXPORTACAO LTDA', null, TO_DATE('11/05/2017','DD/MM/YYYY'), null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'atendimento@sugarprime.com.br', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Dettal - Part Participacoes, Importacao...', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('24/10/2018','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Laerte Codonho', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('24/10/2018','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Tholor do Brasil Ltda.', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('24/10/2018','DD/MM/YYYY'), null);
+    
+    
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 7, 55585756000131, 'AGUIA FER INDUSTRIA E COMERCIO DE FERRO E ACO LTDA', null, TO_DATE('03/11/2005','DD/MM/YYYY'), null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'talisma.contabil@terra.com.br', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Nair Lopes Dias Nunes', null, null, 'F', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('18/03/1991','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Nelson Nunes', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('14/10/1986','DD/MM/YYYY'), null);
+    
+    
+INSERT INTO T_JKC_EMPRESA
+    VALUES (sq_empresa.nextval, 5, 17469701004326, 'BALDONI AGROINDUSTRIA LTDA.', null, TO_DATE('28/09/2001','DD/MM/YYYY'), null, 1);
+        INSERT INTO T_JKC_EMAIL 
+            VALUES (sq_email_emp.nextval, 'contato@baldoni.com.br', 'A');
+                INSERT INTO T_JKC_EMP_EMAIL
+                    VALUES (sq_empresa.currval, sq_email_emp.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Brs Holding e Empreendimentos Ltda', null, null, null, null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('31/07/2018','DD/MM/YYYY'), null);
+        INSERT INTO T_JKC_PROPRIETARIO
+            VALUES (sq_proprietario.nextval, 'Daniel Augusto Cavalcante', null, null, 'M', null);
+                INSERT INTO T_JKC_EMPRESA_PROP
+                    VALUES (sq_empresa.currval, sq_proprietario.currval, TO_DATE('16/08/2022','DD/MM/YYYY'), null);
+
+--Insert tipos de telefone:
+INSERT INTO T_JKC_TIPO_TELEFONE
+    VALUES (1, 'Comercial');
+INSERT INTO T_JKC_TIPO_TELEFONE
+    VALUES (2, 'Residencial');
+INSERT INTO T_JKC_TIPO_TELEFONE
+    VALUES (3, 'Móvel');
+ 
+
+--Insert telefone da empresa + entidade associativa empresa/telefone:
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 43, 35678600, 'A'); 
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (1, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 43, 35678622, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (1, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 19, 21221000, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (2, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 11, 20657321, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (3, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 11, 20657320, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (3, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 11, 30335740, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (4, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 11, 21333872, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (4, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 31, 33588492, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (5, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 19, 37097830, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (5, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+    
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 11, 45341162, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (6, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 11, 40722217, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (7, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 3, null, 11, 986696192, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (8, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 3, null, 11, 998669619, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (8, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+    
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 3, null, 11, 969580851, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (9, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+
+INSERT INTO T_JKC_TELEFONE
+    VALUES (sq_nr_fone_completo.nextval, 1, null, 19, 32572828, 'A');
+        INSERT INTO T_JKC_EMP_TELEF
+            VALUES (10, sq_nr_fone_completo.currval, TO_DATE('22/10/2022','DD/MM/YYYY'), null); 
+
+--Insert dos endereços:
+
+INSERT INTO T_JKC_TIPO_LOGRADOURO
+    VALUES (1, 'Residencial');
+INSERT INTO T_JKC_TIPO_LOGRADOURO
+    VALUES (2, 'Comercial');
+INSERT INTO T_JKC_TIPO_LOGRADOURO
+    VALUES (3, 'Parque Industrial');
+    
+--Fazer o insert de estados dentro de país, e de cidades dentro de estados:
+INSERT INTO T_JKC_PAIS
+    VALUES (sq_pais.nextval, null, 'Brasil');
+
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'AC', 'ACRE');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'AL', 'ALAGOAS');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'AP', 'AMAPÁ');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'AM', 'AMAZONAS');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'BA', 'BAHIA');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'CE', 'CEARÁ');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'DF', 'DISTRITO FEDERAL');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'ES', 'ESPÍRITO SANTO');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'GO', 'GOIÁS');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'MA', 'MARANHÃO');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'MT', 'MATO GROSSO');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'MS', 'MATO GROSSO DO SUL');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'MG', 'MINAS GERAIS');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'PA', 'PARÁ');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'PB', 'PARAÍBA');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'PR', 'PARANÁ');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'PE', 'PERNAMBUCO');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'PI', 'PIAUÍ');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'RJ', 'RIO DE JANEIRO');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'RN', 'RIO GRANDE DO NORTE');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'RS', 'RIO GRANDE DO SUL');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'RO', 'RONDÔNIA');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'RR', 'RORAIMA');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'SC', 'SANTA CATARINA');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'SP', 'SÃO PAULO');
+        INSERT INTO T_JKC_CIDADE
+            VALUES (sq_cidade.nextval, sq_estado.currval, 'São Paulo');
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Pinheiros');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Avenida Pedroso de Morais', 0542000);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 1, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 251, 'Andar 6', null);
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Mooca');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Rua Sarapui', 03123900);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 3, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 164, 'Esquina com a av. Henry Ford 123', null);
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Brás');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Rua Belisário de Sousa', 03019030);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 5, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 77, null, null);
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Vila Paranagua');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Rua Felipe Jose de Figueiredo', 03807300);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 9, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 494, null, null);
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Jardim Veronica');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Rua Arlindo Bettio', 03828000);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 10, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 00, null, null);
+
+        INSERT INTO T_JKC_CIDADE
+            VALUES (sq_cidade.nextval, sq_estado.currval, 'Campinas');
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Jardim Nova América');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Rua Ary Antenor de Souza', 13053024);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 2, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 321, 'Sala R', null);
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Jardim Conceicao');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Avenida Carlos Grimaldi', 13091908);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 4, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 1701, 'Edf Galleria Corporate Conj 2b Sala 01', null);
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Bosque das Palmeiras');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Rua Santo Bassan', 13086745);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 4, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 125, null, null);
+
+        INSERT INTO T_JKC_CIDADE
+            VALUES (sq_cidade.nextval, sq_estado.currval, 'Cabreúva');
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Pinhal');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Rodovia Dom Gabriel Paulino Bueno Couto', 03123900);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 6,  TO_DATE('22/10/2022','DD/MM/YYYY'), null, 00, 'Km 80,4', null);
+
+        INSERT INTO T_JKC_CIDADE
+            VALUES (sq_cidade.nextval, sq_estado.currval, 'São Bernardo do Campo');
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Vila Santa Cassia');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Rua Francisco Vicentainer', 09864630);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 7, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 875, null, null);
+
+        INSERT INTO T_JKC_CIDADE
+            VALUES (sq_cidade.nextval, sq_estado.currval, 'Tatui');
+                INSERT INTO T_JKC_BAIRRO
+                    VALUES (sq_bairro.nextval, sq_cidade.currval, 'Tanque Novo');
+                        INSERT INTO T_JKC_LOGRADOURO
+                            VALUES (sq_logradouro.nextval, 2, sq_bairro.currval, 'Via Vereador Doutor Jordao Olivieri', 18280465);
+                                INSERT INTO T_JKC_EMP_LOGR
+                                    VALUES (sq_endereco.nextval, sq_logradouro.currval, 8, TO_DATE('22/10/2022','DD/MM/YYYY'), null, 477, null, null);
+
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'SE', 'SERGIPE');
+INSERT INTO T_JKC_ESTADO
+    VALUES (sq_estado.nextval, sq_pais.currval, 'TO', 'TOCANTINS');
+
+--Insert Agenda
+
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 8, 'Prospecção', TO_DATE('02/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente no município de Tatuí/SP.', null, null, null, TO_DATE('02/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 3, 'Prospecção', TO_DATE('03/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente no bairro do Brás/SP/SP.', null, null, null, TO_DATE('03/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 5, 'Prospecção', TO_DATE('03/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente no município da Mooca/SP/SP.', null, null, null, TO_DATE('03/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 2, 'Prospecção', TO_DATE('04/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente na cidade de Campinas.', null, null, null, TO_DATE('04/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 4, 'Prospecção', TO_DATE('04/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente na cidade de Campinas.', null, null, null, TO_DATE('04/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 10, 'Prospecção', TO_DATE('05/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente na cidade de Campinas.', null, null, null, TO_DATE('05/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 9, 'Prospecção', TO_DATE('05/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente no bairro de Vila Paranagua/SP/SP.', null, null, null, TO_DATE('05/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 7, 'Prospecção', TO_DATE('06/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente no bairro de Pinheiros/SP/SP.', null, null, null, TO_DATE('04/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 1, 'Prospecção', TO_DATE('06/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente na cidade de São Bernardo do Campo/SP.', null, null, null, TO_DATE('04/01/2023','DD/MM/YYYY'), null, null, 'P');
+INSERT INTO T_JKC_AGENDA_VISITA
+    VALUES(sq_agendamento.nextval, 6, 'Prospecção', TO_DATE('07/01/2023','DD/MM/YYYY'), 'Visita para prospecção de novo cliente na cidade de Cabreúva.', null, null, null, TO_DATE('04/01/2023','DD/MM/YYYY'), null, null, 'P');
+
+--Insert fabricantes:
+
+INSERT INTO T_JKC_FABRICANTE_MAQ
+    VALUES(1, 'Kucmaq');
+INSERT INTO T_JKC_FABRICANTE_MAQ
+    VALUES(2, 'Caterpillar');
+INSERT INTO T_JKC_FABRICANTE_MAQ
+    VALUES(3, 'RDZ');
+INSERT INTO T_JKC_FABRICANTE_MAQ
+    VALUES(4, 'Joetec');
+INSERT INTO T_JKC_FABRICANTE_MAQ
+    VALUES(5, 'Fabricante não encontrado');
+
+--Insert modelos máquina
+
+INSERT INTO T_JKC_MODELO_MAQ
+    VALUES(1, 5, 'Maquina não identificada');
+    
+--Insert categorias de máquinas:
+
+INSERT INTO T_JKC_CATEGORIA_MAQUINA
+    VALUES(1, 'M', 'Empilhadeiras', null);
+INSERT INTO T_JKC_CATEGORIA_MAQUINA
+    VALUES(2, 'M', 'Rebocadores', null);
+INSERT INTO T_JKC_CATEGORIA_MAQUINA
+    VALUES(3, 'M', 'Autocarrinhos', null);
+INSERT INTO T_JKC_CATEGORIA_MAQUINA
+    VALUES(4, 'M', 'Guindastes', null);
+INSERT INTO T_JKC_CATEGORIA_MAQUINA
+    VALUES(5, 'M', 'Betoneiras', null);
+INSERT INTO T_JKC_CATEGORIA_MAQUINA
+    VALUES(6, 'P', 'Marteletes', null);
+INSERT INTO T_JKC_CATEGORIA_MAQUINA
+    VALUES(7, 'M', 'Categoria não definida', null);
+
+--Insert emp_maq_industrial
+
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(1, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(2, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(3, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(4, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(5, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(6, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(7, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(8, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(9, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+INSERT INTO T_JKC_EMP_MAQ_INDUSTRIAL
+    VALUES(10, 1, 1, 7, 'Máquina não encontrada', null, null, null, null, null, null, null, null, null);
+   
+--Insert equipamentos IOT: valores são FICTÍCIOS
+
+INSERT INTO T_JKC_EQUIP_IOT
+    VALUES(1, '1A2345B', 'Realwear', 'A');
+INSERT INTO T_JKC_EQUIP_IOT
+    VALUES(2, '2A2345B', 'Rohde E Schwarz', 'A');
+INSERT INTO T_JKC_EQUIP_IOT
+    VALUES(3, '2A2345C', 'Mgitech', 'A');
+INSERT INTO T_JKC_EQUIP_IOT
+    VALUES(4, '3A2345B', 'Atago', 'A');
+INSERT INTO T_JKC_EQUIP_IOT
+    VALUES(5, '00000', 'Não encontrado', 'A');
+
+--Insert t_jkc_maq_iot
+
+INSERT INTO T_JKC_MAQ_IOT
+    VALUES (1, 1, 1, 5, null, null, null);
+    
+
+COMMIT;
+
