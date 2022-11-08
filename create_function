@@ -1,0 +1,29 @@
+CREATE OR REPLACE FUNCTION verifica_cnpj
+(cnpj IN NUMBER) RETURN VARCHAR2
+IS
+cnpj_lpad NUMBER(15);
+v_dig1 NUMBER(1);
+v_dig2 NUMBER(1);
+calc_dig1 NUMBER (1);
+calc_dig2 NUMBER (1);
+resultado VARCHAR2(5);
+BEGIN
+cnpj_lpad := LPAD(cnpj, 15, 0);
+calc_dig1:=(SUBSTR(cnpj_lpad,12,1)*2+SUBSTR(cnpj_lpad,11,1)*3+SUBSTR(cnpj_lpad,10,1)*4+SUBSTR(cnpj_lpad,9,1)*5
+                                            +SUBSTR(cnpj_lpad,8,1)*6+SUBSTR(cnpj_lpad,7,1)*7+SUBSTR(cnpj_lpad,6,1)*8+SUBSTR(cnpj_lpad,5,1)*9
+                                            +SUBSTR(cnpj_lpad,4,1)*2+SUBSTR(cnpj_lpad,3,1)*3+SUBSTR(cnpj_lpad,2,1)*4+SUBSTR(cnpj_lpad,1,1)*5);
+v_dig1:=(11-MOD(calc_dig1,11));
+calc_dig2:=(SUBSTR(cnpj_lpad,13,1)*2+SUBSTR(cnpj_lpad,12,1)*3+SUBSTR(cnpj_lpad,11,1)*4+SUBSTR(cnpj_lpad,10,1)*5
+                                            +SUBSTR(cnpj_lpad,9,1)*6+SUBSTR(cnpj_lpad,8,1)*7+SUBSTR(cnpj_lpad,7,1)*8+SUBSTR(cnpj_lpad,6,1)*9
+                                            +SUBSTR(cnpj_lpad,5,1)*2+SUBSTR(cnpj_lpad,4,1)*3+SUBSTR(cnpj_lpad,3,1)*4+SUBSTR(cnpj_lpad,2,1)*5+SUBSTR(cnpj_lpad,1,1)*6);
+v_dig2:=(11-MOD(calc_dig2,11));
+IF
+    cnpj = 0 THEN RETURN 'O número do CNPJ indicado é zero! Corrija e tente novamente!';
+    ELSIF cnpj > 0 AND (v_dig1 > 9 OR  calc_dig1= 0) THEN v_dig1:=0;
+    ELSIF cnpj > 0 AND v_dig1 <> SUBSTR(cnpj_lpad,13,1) THEN RETURN 'FALSE';
+    ELSIF cnpj > 0 AND (v_dig2 > 9 OR calc_dig2 = 0) THEN v_dig1 := 0;
+    ELSIF cnpj > 0 AND (v_dig2 <> SUBSTR(cnpj_lpad,14,1)) THEN RETURN 'FALSE';
+        ELSIF v_dig2 = SUBSTR(cnpj_lpad,14,1) THEN RETURN 'TRUE';
+    ELSE RETURN 'FALSE';
+END IF;
+END verifica_cnpj;
